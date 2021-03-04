@@ -39,7 +39,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.androiddevchallenge.components.TimeRemain
 import com.example.androiddevchallenge.components.TimeSelector
 import com.example.androiddevchallenge.ui.theme.MyTheme
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.cancelAndJoin
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
